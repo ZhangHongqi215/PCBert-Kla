@@ -4,25 +4,19 @@
 
 **PCBert-Kla** is a novel computational tool designed to identify **lysine lactylation (Kla)** sites in proteins. By leveraging **ProtBert**, a protein-specific BERT-based language model, and integrating multiple **physicochemical features**, PCBert-Kla offers state-of-the-art accuracy, robustness, and generalization in Kla site prediction.
 
-PCBert-Kla combines the power of deep learning and protein-specific language models with the incorporation of key protein properties to predict Kla sites effectively. It outperforms existing methods in terms of predictive performance and generalization.
-
 ## Key Features
 
 - **Protein Sequence Representation**: PCBert-Kla utilizes the **ProtBert** model, a pre-trained BERT-based model for protein sequences, to extract deep features from protein sequences, improving prediction accuracy for Kla sites.
   
 - **Fusion of Physicochemical Features**: The model integrates a wide range of physicochemical properties of proteins, including:
-  - Molecular weight
-  - Isoelectric point
-  - Amino acid composition
-  - Secondary structure content
-  - Hydrophobicity
-  - Charge distribution
+  - Molecular Weight Calculation
+  - Isoelectric Point Calculation
+  - Amino Acid Composition Analysis
+  - Secondary Structure Content Prediction
+  - Hydrophobicity Calculation
+  - Net Charge Calculation
 
   These features enrich the model's ability to predict Kla sites by considering both sequence and structural characteristics of proteins.
-
-- **Attention Mechanism**: PCBert-Kla incorporates an attention mechanism in the fully connected layers, which allows the model to automatically select the most relevant features for Kla site prediction, further improving its accuracy and robustness.
-
-- **State-of-the-art Performance**: PCBert-Kla demonstrates exceptional accuracy and generalization capabilities, outperforming existing methods in Kla site prediction across multiple performance metrics.
 
 ## Installation
 
@@ -35,17 +29,24 @@ cd PCBert-Kla
 
 ## Data
 
-The dataset includes protein sequences in **FASTA** format. These sequences are processed to extract relevant features, which are then used for training and evaluating the model.
+The dataset includes protein sequences in **csv** format. These sequences are processed to extract relevant features, which are then used for training and evaluating the model.
 
 ### Dataset Files
 
-- `upTrain.fasta`: Training dataset containing labeled protein sequences.
-- `upTest.fasta`: Test dataset for model evaluation.
+- `train.csv`: Training dataset containing labeled protein sequences.
+- `test.csv`: Test dataset for model evaluation.
 
-### Data Format
+## How to Run
 
-- Each sequence in the dataset is in **FASTA** format, where each sequence is labeled with the Kla site information.
-- The sequences are processed to extract the necessary features before being fed into the model for training.
+1. **Prepare the Data**:
+   Place your protein sequence data in the `data/` directory. You can download or upload your own dataset in **FASTA** format.
+
+2. **Run the Notebook**:
+   Open and run the `PCBert-Kla.ipynb` notebook in Jupyter Notebook or JupyterLab.
+
+3. **Model Training and Evaluation**:
+   The notebook will guide you through training the model and evaluating its performance on the test dataset. The results will include metrics such as accuracy, precision, recall, and F1 score.
+
 
 ## Model Architecture
 
