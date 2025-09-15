@@ -20,7 +20,7 @@
 
 ## Installation
 
-To get started with PCBert-Kla, clone the repository and install the necessary dependencies:
+To get started with PCBert-Kla, clone the repository:
 
 ```bash
 git clone https://github.com/ZhangHongqi215/PCBert-Kla.git
